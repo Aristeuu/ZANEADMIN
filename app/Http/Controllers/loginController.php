@@ -15,6 +15,7 @@ class loginController extends Controller
      */
     public function login(Request $request)
     {
+        dd('ok');
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
