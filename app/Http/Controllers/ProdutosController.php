@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Banner;
+use App\Models\Produtos;
 
-class BannerController extends Controller
+class ProdutosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,8 @@ class BannerController extends Controller
      */
     public function index()
     {
-        $data = Banner::getAll();
-        //dd($data);
-        return view('banner',compact('data'));
+        $data = Produtos::getAll();
+        return view('Produtos',compact('data'));
     }
 
     /**
@@ -59,14 +58,16 @@ class BannerController extends Controller
                     
                      
                     $dados = [
-                        "titulo" => $request->titulo,
+                        "nome" => $request->nome,
+                        "preco" => $request->preco,
+                        "desconto" => $request->desconto,
                         "descricao" => $request->descricao,                
                         "foto" => $nameFile_F,                        
                         "status" =>'1'               
                         
                     ];
 
-                    $id = Banner::create($dados)->id;
+                    $id = Produtos::create($dados)->id;
                     $file->move(public_path('images/'), $nameFile_F);           
                     //dd($id);
                 $request->session()->flash('swalDefaultSuccess', 'Dados adicionados com sucesso.'); 
@@ -140,7 +141,9 @@ class BannerController extends Controller
                     
                      
                     $dados = [
-                        "titulo" => $request->titulo,
+                        "nome" => $request->nome,
+                        "preco" => $request->preco,
+                        "desconto" => $request->desconto,
                         "descricao" => $request->descricao,                
                         "foto" => $nameFile_F,                        
                         "status" => '1'                   
@@ -148,11 +151,13 @@ class BannerController extends Controller
                     ];
 
                    
-                    $data = Banner::find($id);
-                    $data->titulo    = $dados['titulo'];
-                    $data->descricao = $dados['descricao'];                    
-                    $data->foto      = $dados['foto'];
-                    $data->status    = $dados['status'];
+                    $data = Produtos::find($id);
+                    $data->nome        = $dados['nome'];
+                    $data->preco       = $dados['preco'];
+                    $data->desconto    = $dados['desconto'];
+                    $data->descricao   = $dados['descricao'];                    
+                    $data->foto        = $dados['foto'];
+                    $data->status      = $dados['status'];
                     
                     $data->update();
 
@@ -167,16 +172,22 @@ class BannerController extends Controller
             {
                
                 $dados = [
-                    "titulo" => $request->titulo,
+                    "nome" => $request->nome,
+                    "preco" => $request->preco,
+                    "desconto" => $request->desconto,
                     "descricao" => $request->descricao,              
                     "status" => '1'                   
                     
                 ];
+
                
-                $data = Banner::find($id);
-                $data->titulo    = $dados['titulo'];
-                $data->descricao = $dados['descricao'];                                    
-                $data->status    = $dados['status'];
+                $data = Produtos::find($id);
+                $data->nome        = $dados['nome'];
+                $data->preco       = $dados['preco'];
+                $data->desconto    = $dados['desconto'];
+                $data->descricao   = $dados['descricao'];                   
+                $data->status      = $dados['status'];
+               
                
                 
                 $data->update();
@@ -200,7 +211,7 @@ class BannerController extends Controller
      */
     public function destroy(Request $request,$id)
     {
-        $delete = Banner::find($id)->delete();
+        $delete = Produtos::find($id)->delete();
         if($delete)
         {
             $request->session()->flash('swalDefaultSuccess', 'Registo eliminado com sucesso');
@@ -211,6 +222,5 @@ class BannerController extends Controller
             $request->session()->flash('swalDefaultError', 'Registo não eliminado');
             return redirect()->back();
         }
-
     }
 }

@@ -14,4 +14,13 @@ class Banner extends Model
     protected $table = 'banners';
 
     protected $fillable = ['titulo','descricao','foto','status'];
+
+
+
+    public static function getAll()
+    {
+        return $table = Banner::select('*')
+                                ->whereNUll('deleted_at')
+                                ->paginate(8);
+    }
 }

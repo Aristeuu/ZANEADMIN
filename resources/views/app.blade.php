@@ -222,7 +222,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->          
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link @if(Request()->is('admin/banners')) active @endif">
+            <a href="{{route('banners.show')}}" class="nav-link @if(Request()->is('admin/banners')) active @endif">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Banners                
@@ -230,7 +230,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link @if(Request()->is('admin/produtos')) active @endif">
+            <a href="{{route('produtos.show')}}" class="nav-link @if(Request()->is('admin/produtos')) active @endif">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Produtos                
@@ -238,7 +238,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link @if(Request()->is('admin/locais')) active @endif">
+            <a href="{{route('locais.show')}}" class="nav-link @if(Request()->is('admin/locais')) active @endif">
               <i class="far fa-circle nav-icon"></i>
               <p>
                 Locais                
@@ -246,7 +246,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link @if(Request()->is('admin/depoimentos')) active @endif">
+            <a href="{{route('depoimentos.show')}}" class="nav-link @if(Request()->is('admin/depoimentos')) active @endif">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Depoimentos                

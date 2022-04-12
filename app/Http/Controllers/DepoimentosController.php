@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Banner;
+use App\Models\Depoimentos;
 
-class BannerController extends Controller
+class DepoimentosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,8 @@ class BannerController extends Controller
      */
     public function index()
     {
-        $data = Banner::getAll();
-        //dd($data);
-        return view('banner',compact('data'));
+        $data = Depoimentos::getAll();
+        return view('depoimentos',compact('data'));
     }
 
     /**
@@ -59,14 +58,14 @@ class BannerController extends Controller
                     
                      
                     $dados = [
-                        "titulo" => $request->titulo,
-                        "descricao" => $request->descricao,                
+                        "nome" => $request->nome,
+                        "texto" => $request->texto,                
                         "foto" => $nameFile_F,                        
                         "status" =>'1'               
                         
                     ];
 
-                    $id = Banner::create($dados)->id;
+                    $id = Depoimentos::create($dados)->id;
                     $file->move(public_path('images/'), $nameFile_F);           
                     //dd($id);
                 $request->session()->flash('swalDefaultSuccess', 'Dados adicionados com sucesso.'); 
@@ -122,6 +121,7 @@ class BannerController extends Controller
             $nameFile_F  = null;
             if($file=$request->file('img')){
 
+                    //dd('ok');
                 //foreach($files as $file){
                     
                     $namePhoto = uniqid(date('HisYmd'));
@@ -139,20 +139,23 @@ class BannerController extends Controller
                     //$upload = $request->anexo->storeAs('public/recibos', $nameFile);
                     
                      
+                   
                     $dados = [
-                        "titulo" => $request->titulo,
-                        "descricao" => $request->descricao,                
-                        "foto" => $nameFile_F,                        
+                        "nome" => $request->nome,
+                        "texto" => $request->texto,   
+                        "foto" => $nameFile_F,            
                         "status" => '1'                   
                         
                     ];
+                   
+                    $data = Depoimentos::find($id);
+                    $data->nome    = $dados['nome'];
+                    $data->texto = $dados['texto'];                                    
+                    $data->status    = $dados['status'];
+                    $data->foto      = $dados['foto'];
 
                    
-                    $data = Banner::find($id);
-                    $data->titulo    = $dados['titulo'];
-                    $data->descricao = $dados['descricao'];                    
-                    $data->foto      = $dados['foto'];
-                    $data->status    = $dados['status'];
+                  
                     
                     $data->update();
 
@@ -167,15 +170,15 @@ class BannerController extends Controller
             {
                
                 $dados = [
-                    "titulo" => $request->titulo,
-                    "descricao" => $request->descricao,              
+                    "nome" => $request->nome,
+                    "texto" => $request->texto,              
                     "status" => '1'                   
                     
                 ];
                
-                $data = Banner::find($id);
-                $data->titulo    = $dados['titulo'];
-                $data->descricao = $dados['descricao'];                                    
+                $data = Depoimentos::find($id);
+                $data->nome    = $dados['nome'];
+                $data->texto = $dados['texto'];                                    
                 $data->status    = $dados['status'];
                
                 
@@ -200,7 +203,7 @@ class BannerController extends Controller
      */
     public function destroy(Request $request,$id)
     {
-        $delete = Banner::find($id)->delete();
+        $delete = Depoimentos::find($id)->delete();
         if($delete)
         {
             $request->session()->flash('swalDefaultSuccess', 'Registo eliminado com sucesso');
