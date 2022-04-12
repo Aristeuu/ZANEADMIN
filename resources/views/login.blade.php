@@ -43,7 +43,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="/dist/css/signin.css" rel="stylesheet">
+    <link href="public/dist/css/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
     
