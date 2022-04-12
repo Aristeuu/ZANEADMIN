@@ -109,7 +109,7 @@
                 <tbody>
                     @foreach ($data as $item)
                     <tr>                        
-                        <td><img src="{{asset('images')}}/{{$item->foto}}" class="rounded-circle" width="50" height="60" /></td>
+                        <td><img src="{{asset('public/images')}}/{{$item->foto}}" class="rounded-circle" width="50" height="60" /></td>
                         <td>{{$item->nome}}</td>
                         <td>
                             @if($item->desconto != null)

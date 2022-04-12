@@ -17,5 +17,12 @@ class Usuarios extends Model
                 'email',
                 'password'
     ];
+
+    
+    public static function getAll()
+    {
+        return $table = Usuarios::select('*')
+                            ->paginate(8);
+    }
     
 }

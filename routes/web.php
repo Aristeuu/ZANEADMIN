@@ -8,6 +8,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\LocaisController;
 use App\Http\Controllers\DepoimentosController;
+use App\Http\Controllers\UsuariosController;
 
 
 /*
@@ -68,10 +69,13 @@ Route::middleware(['auth'])->group(function(){
     Route::put('admin/depoimentos/update/{id}',[DepoimentosController::class,'update'])->name('depoimentos.update');
     Route::delete('admin/depoimentos/delete/{id}',[DepoimentosController::class,'destroy'])->name('depoimentos.delete');
 
+    Route::get('admin/usuarios',[UsuariosController::class,'index'])->name('usuarios.show');
+
     /////////////////////////////////////////////////////////////////////
     Route::get('logout',[homeController::class, 'logout'])->name('logout');
     
     Route::get('/registar', function(){
+        Auth()->logout();
         return view('welcome');
     })->name('showRegister');
 
