@@ -49,7 +49,7 @@
     
 <main class="form-signin">
 <form action="{{route('login')}}" method="POST" id="formPost">
-      @csrf
+    {{ csrf_field() }}
     <img class="mb-4" src="public/images/logo.png" alt="" width="100" height="100">
     <h1 class="h3 mb-3 fw-normal">Please Log in</h1>
 
