@@ -37,7 +37,7 @@ Route::get('/login',function()
     return view('login');
 })->name('showLogin')->middleware('guest');
 
-Route::post('/login',[loginController::class, 'login'])->name('login.send');
+Route::post('/login',[loginController::class, 'login'])->name('login');
 
 Route::middleware(['auth'])->group(function(){
 
