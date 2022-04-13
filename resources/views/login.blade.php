@@ -50,17 +50,17 @@
     
 <main class="form-signin">
   <img class="mb-4" src="public/images/logo.png" alt="" width="100" height="100">
-<form action="{{route('login')}}" method="POST" id="formPost" enctype="multipart/form-data">
-       @csrf
-       
+   <form action="{{route('login')}}" method="POST" id="formPost" enctype="multipart/form-data">
+                 
+    <input type="hidden" name="_token" form="formPost" value="{{ csrf_token() }}" >
     <h1 class="h3 mb-3 fw-normal">Please Log in</h1>
 
     <div class="form-floating">
-      <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+      <input type="email" name="email" class="form-control" form="formPost" id="floatingInput" placeholder="name@example.com" required>
       <label for="floatingInput">Email address</label>
     </div>
     <div class="form-floating">
-      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password"  required>
+      <input type="password" name="password" class="form-control" form="formPost" id="floatingPassword" placeholder="Password"  required>
       <label for="floatingPassword">Password</label>
     </div>    
     
