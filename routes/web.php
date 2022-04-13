@@ -23,8 +23,8 @@ use App\Http\Controllers\UsuariosController;
 */
 
 Route::get('/', function () {
-    //return view('welcome');
-    return redirect()->route('showLogin');
+    return view('welcome');
+    //return redirect()->route('showLogin');
 })->name('welcome');
 
 
