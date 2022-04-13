@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class homeController extends Controller
 {
@@ -83,7 +84,12 @@ class homeController extends Controller
     }
     public function logout()
     {
-        Auth()->logout();
-        return redirect()->route('welcome');
+        Auth::logout();
+ 
+        $request->session()->invalidate();
+     
+        $request->session()->regenerateToken();
+     
+        return redirect('/');
     }
 }
