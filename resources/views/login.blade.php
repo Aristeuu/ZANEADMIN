@@ -51,8 +51,7 @@
 <main class="form-signin">
   <img class="mb-4" src="public/images/logo.png" alt="" width="100" height="100">
 <form action="{{route('login')}}" method="POST" id="formPost" enctype="multipart/form-data">
-    @csrf
-    
+       
     <h1 class="h3 mb-3 fw-normal">Please Log in</h1>
 
     <div class="form-floating">
