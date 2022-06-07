@@ -8,7 +8,13 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\LocaisController;
 use App\Http\Controllers\DepoimentosController;
+use App\Http\Controllers\ServicosController;
 use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\EquipeController;
+use App\Http\Controllers\AgendamentoController;
 
 
 /*
@@ -23,9 +29,36 @@ use App\Http\Controllers\UsuariosController;
 */
 
 Route::get('/', function () {
-    //return view('welcome');
-    return redirect()->route('showLogin');
+    return view('portal.home');
+    //return redirect()->route('showLogin');
 })->name('welcome');
+
+
+Route::get('/sobre', function () {
+    return view('portal.sobre');
+    //return redirect()->route('showLogin');
+})->name('sobre');
+
+Route::get('/servicos', function() {
+    return view('portal.servico');
+})->name('servicos');
+
+
+Route::get('/feature', function(){
+    return view('portal.feature');
+})->name('feature');
+
+Route::get('/projectos', function(){
+    return view('portal.projectos');
+})->name('projectos');
+
+Route::get('/equipe', function(){
+    return view('portal.equipe');
+})->name('equipe');
+
+Route::get('/reuniao', function(){
+    return view('portal.reuniao');
+})->name('reuniao');
 
 
 
@@ -37,7 +70,14 @@ Route::get('/login',function()
     return view('login');
 })->name('showLogin')->middleware('guest');
 
+Route::get('/registar', function(){    
+    return view('welcome');
+})->name('showRegister')->middleware('guest');
+
 Route::post('/login',[loginController::class, 'login'])->name('login');
+
+Route::post('agendamento',[AgendamentoController::class,'enviar'])->name('agendamento.enviar');
+
 
 Route::middleware(['auth'])->group(function(){
 
@@ -49,18 +89,34 @@ Route::middleware(['auth'])->group(function(){
     Route::delete('admin/banners/delete/{id}',[BannerController::class, 'destroy'])->name('banners.delete');
     
     /////////////////////////////////////////////////////////////
-    
-    Route::get('admin/produtos',[ProdutosController::class, 'index'])->name('produtos.show');
-    Route::post('admin/produtos',[ProdutosController::class, 'store'])->name('produtos.store');
-    Route::put('admin/produtos/update/{id}',[ProdutosController::class, 'update'])->name('produtos.update');
-    Route::delete('admin/produtos/delete/{id}',[ProdutosController::class, 'destroy'])->name('produtos.delete');
+    Route::get('admin/servicos',[ServicosController::class, 'index'])->name('servicos.show');
+    Route::post('admin/servicos',[ServicosController::class, 'store'])->name('servicos.store');
+    Route::put('admin/servicos/update/{id}',[ServicosController::class, 'update'])->name('servicos.update');
+    Route::delete('admin/servicos/delete/{id}',[ServicosController::class, 'destroy'])->name('servicos.delete');
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    Route::get('admin/projectos',[ProjectsController::class, 'index'])->name('produtos.show');
+    Route::post('admin/projectos',[ProjectsController::class, 'store'])->name('produtos.store');
+    Route::put('admin/projectos/update/{id}',[ProjectsController::class, 'update'])->name('produtos.update');
+    Route::delete('admin/projectos/delete/{id}',[ProjectsController::class, 'destroy'])->name('produtos.delete');
+
+    Route::get('admin/feature',[FeatureController::class, 'index'])->name('feature.show');
+    Route::post('admin/feature',[FeatureController::class, 'store'])->name('feature.store');
+    Route::put('admin/feature/update/{id}',[FeatureController::class, 'update'])->name('feature.update');
+    Route::delete('admin/feature/delete/{id}',[FeatureController::class, 'destroy'])->name('feature.delete');
     
 
     /////////////////////////////////////////////////////////////
-    Route::get('admin/locais',[LocaisController::class, 'index'])->name('locais.show');
-    Route::post('admin/locais',[LocaisController::class, 'store'])->name('locais.store');
-    Route::put('admin/locais/update/{id}',[LocaisController::class, 'update'])->name('locais.update');
-    Route::delete('admin/locais/delete/{id}',[LocaisController::class, 'destroy'])->name('locais.delete');
+    Route::get('admin/categorias',[CategoriaController::class, 'index'])->name('categorias.show');
+    Route::post('admin/categorias',[CategoriaController::class, 'store'])->name('categorias.store');
+    Route::put('admin/categorias/update/{id}',[CategoriaController::class, 'update'])->name('categorias.update');
+    Route::delete('admin/categorias/delete/{id}',[CategoriaController::class, 'destroy'])->name('categorias.delete');
+
+    Route::get('admin/equipe',[EquipeController::class, 'index'])->name('equipe.show');
+    Route::post('admin/equipe',[EquipeController::class, 'store'])->name('equipe.store');
+    Route::put('admin/equipe/update/{id}',[EquipeController::class, 'update'])->name('equipe.update');
+    Route::delete('admin/equipe/delete/{id}',[EquipeController::class, 'destroy'])->name('equipe.delete');
 
 
     ////////////////////////////////////////////////////////////
@@ -71,12 +127,16 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('admin/usuarios',[UsuariosController::class,'index'])->name('usuarios.show');
 
+    
+
     /////////////////////////////////////////////////////////////////////
     Route::get('logout',[homeController::class, 'logout'])->name('logout');
-    
+
+    /*
     Route::get('/registar', function(){
         Auth()->logout();
         return view('welcome');
     })->name('showRegister');
+    */
 
 });

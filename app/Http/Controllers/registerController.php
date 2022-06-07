@@ -44,7 +44,7 @@ class registerController extends Controller
         
       
      $idUser = DB::table('users')->insertGetId(
-         ['email' => $request->email,'nome' => $request->nome,'password' =>Hash::make($request->password),'created_at' =>date("Y-m-d H:i:s")]
+         ['email' => $request->email,'name' => $request->nome,'password' =>Hash::make($request->password),'created_at' =>date("Y-m-d H:i:s")]
      );
     
      

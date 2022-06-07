@@ -97,7 +97,7 @@
                 <tbody>
                     @foreach ($data as $item)
                     <tr>                       
-                        <td>{{$item->nome}}</td>
+                        <td>{{$item->name}}</td>
                         <td>{{$item->email}}</td>                                            
                     </tr>                    
                     

@@ -10,7 +10,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
         <div class="col-sm-6">
-            <h1>Adicionar Produto <a href="http://" data-toggle="modal" onclick="editor(6)" data-target="#modal-default"><i class="fas fa-plus mr-1" alt="Novo" title="Novo"></i></a>
+            <h1>Adicionar Projecto <a href="http://" data-toggle="modal" onclick="editor(6)" data-target="#modal-default"><i class="fas fa-plus mr-1" alt="Novo" title="Novo"></i></a>
                 
             </h1>
         </div>

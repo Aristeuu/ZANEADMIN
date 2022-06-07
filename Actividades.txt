@@ -1,0 +1,13 @@
+Banners->foto,titulo
+Servicos->foto,titulo,descricao
+feature(caracteristicas)->uma unica foto; um titulo,um paragrafo
+/*
+	itens->foto,titulo,um paragrafo	
+*/
+projectos->titulo,descricao,categoria,foto
+categorias->titulo
+Membros da equipe->foto,nome,designacao,facebook,twitter,instagram,tiktok
+
+
+email:pprototiposs@gmail.com
+senha:Wi@QkHJzYJwo
