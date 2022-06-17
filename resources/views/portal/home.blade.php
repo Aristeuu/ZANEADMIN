@@ -189,7 +189,7 @@
                 <div class="col-lg-4">
                     <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
                         @foreach($projectos as $projecto)
-                            <button class="nav-link w-100 active d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-{{$projecto->id}}" type="button">
+                            <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-{{$projecto->id}}" type="button">
                                 <h3 class="m-0">{{$projecto->ROW}} {{$projecto->project_titulo}}</h3>
                             </button>
                         @endforeach
@@ -210,11 +210,11 @@
                 <div class="col-lg-8">
                     <div class="tab-content w-100">
                         @foreach($projectos as $projecto)
-                             <div class="tab-pane fade active" id="tab-pane-{{$projecto->id}}">
+                             <div class="tab-pane fade" id="tab-pane-{{$projecto->id}}">
                                 <div class="row g-4">
                                     <div class="col-md-6" style="min-height: 350px;">
                                         <div class="position-relative h-100">
-                                            <img class="position-absolute img-fluid w-100 h-100" src="public//images/{{$projecto->foto}}"
+                                            <img class="position-absolute img-fluid w-100 h-100" src="public/images/{{$projecto->foto}}"
                                                 style="object-fit: cover;" alt="">
                                         </div>
                                     </div>
@@ -249,7 +249,7 @@
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="team-item position-relative">
                                 <div class="position-relative">
-                                    <img class="img-fluid" src="public//images/{{$team->foto}}" alt="">
+                                    <img class="img-fluid" src="public/images/{{$team->foto}}" alt="">
                                     <div class="team-social text-center">
                                         <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                         <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>

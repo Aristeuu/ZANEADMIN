@@ -57,7 +57,7 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+244 929-588-626 "><i class="fa fa-phone-alt text-primary me-2"></i>+244 929-588-626 </a>
+                    <a class="text-body px-2" href="https://whats.link/prototipos"><i class="fa fa-phone-alt text-primary me-2"></i>+244 929-588-626 </a>
                     <a class="text-body px-2" href="consultoria.prototipos@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i>consultoria.prototipos@gmail.com</a>
                 </div>
             </div>
