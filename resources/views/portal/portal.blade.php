@@ -57,7 +57,7 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="https://whats.link/prototipos"><i class="fa fa-phone-alt text-primary me-2"></i>+244 929-588-626 </a>
+                    <a class="text-body px-2" href="https://wa.me/244929588626" target="_blank"><i class="fa fa-phone-alt text-primary me-2"></i>+244 929-588-626 </a>
                     <a class="text-body px-2" href="consultoria.prototipos@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i>consultoria.prototipos@gmail.com</a>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square btn-outline-body me-1" target="_blank" href="https://www.facebook.com/archprototipos"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-whatsapp"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href="https://wa.me/244929588626" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a class="btn btn-sm-square btn-outline-body me-0" target="_blank" href="https://www.instagram.com/prototipos_arq"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
