@@ -167,9 +167,8 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="">
-                        <img class="img-fluid" src="public/portal/img/jpg" alt="">
-                        <img class="img-fluid" src="public/portal/img/about 21.jpg" alt="">
+                    <div class="">                        
+                        <img class="img-fluid" src="public/images/t_about.jpg" alt="">
                     </div>
                 </div>
             </div>
