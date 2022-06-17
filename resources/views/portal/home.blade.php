@@ -7,15 +7,15 @@
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
             @foreach($banners as $banner)
-                <div class="owl-carousel-item position-relative" data-dot="<img src='public//images/{{$banner->foto}}'>">
-                    <img class="img-fluid" src="public//images/{{$banner->foto}}" alt="">
+                <div class="owl-carousel-item position-relative" data-dot="<img src='public/images/{{$banner->foto}}'>">
+                    <img class="img-fluid" src="public/images/{{$banner->foto}}" alt="">
                     <div class="owl-carousel-inner">
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-10 col-lg-8">
                                     <h1 class="display-1 text-white animated slideInDown">{{$banner->titulo}}</h1>
                                     <p class="fs-5 fw-medium text-white mb-4 pb-3"></p>
-                                    <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">Saber Mais</a>
+                                    <a href="#" class="btn btn-primary py-3 px-5 animated slideInLeft">Saber Mais</a>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="">
                         <!--img class="img-fluid" src="portal/img/.jpg" alt=""-->
-                        <img class="img-fluid" src="public/portal/img/about 64.jpg" alt="">
+                        <img class="img-fluid" src="public/images/about.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
