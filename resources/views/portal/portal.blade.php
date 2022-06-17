@@ -126,7 +126,7 @@
     
                             <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-whatsapp"></i></a>
+                            <a class="btn btn-square btn-outline-body me-1" href="https://wa.me/244929588626" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             
                         </div>
                     </div>
