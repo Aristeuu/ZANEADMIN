@@ -7,8 +7,8 @@
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
             @foreach($banners as $banner)
-                <div class="owl-carousel-item position-relative" data-dot="<img src='/images/{{$banner->foto}}'>">
-                    <img class="img-fluid" src="/images/{{$banner->foto}}" alt="">
+                <div class="owl-carousel-item position-relative" data-dot="<img src='public//images/{{$banner->foto}}'>">
+                    <img class="img-fluid" src="public//images/{{$banner->foto}}" alt="">
                     <div class="owl-carousel-inner">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -37,7 +37,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                         <div class="fact-icon">
-                            <img src="portal/img/icons/icon-2.png" alt="Icon">
+                            <img src="public/portal/img/icons/icon-2.png" alt="Icon">
                         </div>
                         <h3 class="mb-3">Design</h3>
                         <p class="mb-0"></p>
@@ -46,7 +46,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                         <div class="fact-icon">
-                            <img src="portal/img/icons/icon-3.png" alt="Icon">
+                            <img src="public/portal/img/icons/icon-3.png" alt="Icon">
                         </div>
                         <h3 class="mb-3">Soluções Inovadoras</h3>
                         <p class="mb-0"></p>
@@ -55,7 +55,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                         <div class="fact-icon">
-                            <img src="portal/img/icons/icon-4.png" alt="Icon">
+                            <img src="public/portal/img/icons/icon-4.png" alt="Icon">
                         </div>
                         <h3 class="mb-3">Gerência de projetos</h3>
                         <p class="mb-0"></p>
@@ -74,7 +74,7 @@
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="">
                         <!--img class="img-fluid" src="portal/img/.jpg" alt=""-->
-                        <img class="img-fluid" src="portal/img/about 64.jpg" alt="">
+                        <img class="img-fluid" src="public/portal/img/about 64.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -111,9 +111,9 @@
                 @foreach($categorias as $categoria)
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item d-flex position-relative text-center h-100">
-                            <img class="bg-img" src="portal/img/service-1.jpg" alt="">
+                            <img class="bg-img" src="public/portal/img/service-1.jpg" alt="">
                             <div class="service-text p-5">
-                                <img class="mb-4" src="/images/{{$categoria->foto}}" alt="Icon">
+                                <img class="mb-4" src="public/images/{{$categoria->foto}}" alt="Icon">
                                 <h3 class="mb-3">{{$categoria->titulo}}</h3>
                                 <p class="mb-4"></p>
                                 <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Saber mais</a>
@@ -139,7 +139,7 @@
                     <div class="row g-4">
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="portal/img/icons/icon-2.png" alt="Icon">
+                                <img class="flex-shrink-0" src="public/portal/img/icons/icon-2.png" alt="Icon">
                                 <div class="ms-4">
                                     <h3>Abordagem de design</h3>
                                     <!--p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p-->
@@ -148,7 +148,7 @@
                         </div>
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="portal/img/icons/icon-3.png" alt="Icon">
+                                <img class="flex-shrink-0" src="public/portal/img/icons/icon-3.png" alt="Icon">
                                 <div class="ms-4">
                                     <h3>Soluções Inovadoras</h3>
                                     <!--p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p-->
@@ -157,7 +157,7 @@
                         </div>
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="portal/img/icons/icon-4.png" alt="Icon">
+                                <img class="flex-shrink-0" src="public/portal/img/icons/icon-4.png" alt="Icon">
                                 <div class="ms-4">
                                     <h3>Gerência de projetos</h3>
                                     <!--p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p-->
@@ -168,8 +168,8 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="">
-                        <img class="img-fluid" src="portal/img/jpg" alt="">
-                        <img class="img-fluid" src="portal/img/about 21.jpg" alt="">
+                        <img class="img-fluid" src="public/portal/img/jpg" alt="">
+                        <img class="img-fluid" src="public/portal/img/about 21.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -214,7 +214,7 @@
                                 <div class="row g-4">
                                     <div class="col-md-6" style="min-height: 350px;">
                                         <div class="position-relative h-100">
-                                            <img class="position-absolute img-fluid w-100 h-100" src="/images/{{$projecto->foto}}"
+                                            <img class="position-absolute img-fluid w-100 h-100" src="public//images/{{$projecto->foto}}"
                                                 style="object-fit: cover;" alt="">
                                         </div>
                                     </div>
@@ -249,7 +249,7 @@
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="team-item position-relative">
                                 <div class="position-relative">
-                                    <img class="img-fluid" src="/images/{{$team->foto}}" alt="">
+                                    <img class="img-fluid" src="public//images/{{$team->foto}}" alt="">
                                     <div class="team-social text-center">
                                         <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                         <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -367,7 +367,7 @@
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 @foreach($parceiros as $parceiro)
-                    <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='/images/{{$parceiro->foto}}' alt=''>">
+                    <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='public/images/{{$parceiro->foto}}' alt=''>">
                     <p class="fs-5"></p>
                         <h3>{{$parceiro->titulo}}</h3>
                         <!--span class="text-primary">Profissão</span-->

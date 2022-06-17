@@ -21,23 +21,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="portal/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="portal/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="portal/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="public/portal/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="public/portal/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="public/portal/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="portal/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/portal/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="portal/css/style.css" rel="stylesheet">
+    <link href="public/portal/css/style.css" rel="stylesheet">
 
      <!--Toastr-alert-->
   
-<link rel="stylesheet" href="/admin/plugins/codemirror/theme/monokai.css">
+<link rel="stylesheet" href="public//admin/plugins/codemirror/theme/monokai.css">
 
-<link rel="stylesheet" href="/admin/plugins/codemirror/codemirror.css">
-<link rel="stylesheet" href="/admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
-<link rel="stylesheet" href="/admin/plugins/toastr/toastr.min.css">
+<link rel="stylesheet" href="public//admin/plugins/codemirror/codemirror.css">
+<link rel="stylesheet" href="public//admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+<link rel="stylesheet" href="public//admin/plugins/toastr/toastr.min.css">
 
 
     @stack('style')
@@ -47,7 +47,7 @@
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <img class="position-absolute top-50 start-50 translate-middle" src="portal/img/icons/Prototipos_logo - Cópia.jpg" alt="Icon">
+        <img class="position-absolute top-50 start-50 translate-middle" src="public/portal/img/icons/Prototipos_logo - Cópia.jpg" alt="Icon">
     </div>
     <!-- Spinner End -->
 
@@ -80,7 +80,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <h1 class="text-primary m-0"><img class="me-3" src="portal/img/icons/Prototipos_logo - Cópia.jpg" alt=""></h1>
+            <h1 class="text-primary m-0"><img class="me-3" src="public/portal/img/icons/Prototipos_logo - Cópia.jpg" alt=""></h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -180,26 +180,26 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="portal/lib/wow/wow.min.js"></script>
-    <script src="portal/lib/easing/easing.min.js"></script>
-    <script src="portal/lib/waypoints/waypoints.min.js"></script>
-    <script src="portal/lib/counterup/counterup.min.js"></script>
-    <script src="portal/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="portal/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="portal/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="portal/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="public/portal/lib/wow/wow.min.js"></script>
+    <script src="public/portal/lib/easing/easing.min.js"></script>
+    <script src="public/portal/lib/waypoints/waypoints.min.js"></script>
+    <script src="public/portal/lib/counterup/counterup.min.js"></script>
+    <script src="public/portal/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="public/portal/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="public/portal/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="public/portal/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="portal/js/main.js"></script>
+    <script src="public/portal/js/main.js"></script>
 
 
     
-<script src="/admin/plugins/codemirror/codemirror.js"></script>
-<script src="/admin/plugins/codemirror/mode/css/css.js"></script>
-<script src="/admin/plugins/codemirror/mode/xml/xml.js"></script>
-<script src="/admin/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-<script src="/admin/plugins/sweetalert2/sweetalert2.min.js"></script>
-<script src="/admin/plugins/toastr/toastr.min.js"></script>
+<script src="public//admin/plugins/codemirror/codemirror.js"></script>
+<script src="public//admin/plugins/codemirror/mode/css/css.js"></script>
+<script src="public//admin/plugins/codemirror/mode/xml/xml.js"></script>
+<script src="public//admin/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="public//admin/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="public//admin/plugins/toastr/toastr.min.js"></script>
 
 
 
