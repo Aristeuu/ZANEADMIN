@@ -4,12 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Softdeletes;
+use Illuminate\Database\Eloquent\softdeletes;
 
 class Banner extends Model
 {
     use HasFactory;
-    use Softdeletes;
+    use softdeletes;
 
     protected $table = 'banners';
 
