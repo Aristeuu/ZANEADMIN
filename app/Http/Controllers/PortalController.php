@@ -8,7 +8,7 @@ use App\Models\Banner;
 use App\Models\Categoria;
 use App\Models\Projects;
 use App\Models\Equipe;
-use App\Models\parceiros;
+use App\Models\Parceiros;
 
 class PortalController extends Controller
 {
@@ -23,7 +23,7 @@ class PortalController extends Controller
         $categorias = Categoria::listar_categorias();
         $projectos  = Projects::listar_projectos();
         $teams      = Equipe::all();
-        $parceiros  = parceiros::listar_parceiros();
+        $parceiros  = Parceiros::listar_parceiros();
        // dd($parceiros);
         
         return view('portal.home',compact('banners','categorias','projectos','teams','parceiros'));
