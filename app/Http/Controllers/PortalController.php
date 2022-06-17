@@ -29,6 +29,14 @@ class PortalController extends Controller
         return view('portal.home',compact('banners','categorias','projectos','teams','parceiros'));
     }
 
+
+    public function sobre()
+    {
+        $teams      = Equipe::all();
+
+        return view('portal.sobre',compact('teams'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

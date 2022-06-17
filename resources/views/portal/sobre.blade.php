@@ -25,9 +25,8 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="">
-                        <img class="img-fluid" src="portal/img/.jpg" alt="">
-                        <img class="img-fluid" src="portal/img/about 64.jpg" alt="">
+                    <div class="">                        
+                        <img class="img-fluid" src="public/images/about.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -66,7 +65,7 @@
                     <div class="row g-4">
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="portal/img/icons/icon-2.png" alt="Icon">
+                                <img class="flex-shrink-0" src="public/portal/img/icons/icon-2.png" alt="Icon">
                                 <div class="ms-4">
                                     <h3>Abordagem de design</h3>
                                     <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
@@ -75,7 +74,7 @@
                         </div>
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="portal/img/icons/icon-3.png" alt="Icon">
+                                <img class="flex-shrink-0" src="public/portal/img/icons/icon-3.png" alt="Icon">
                                 <div class="ms-4">
                                     <h3>Soluções Inovadoras</h3>
                                     <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
@@ -84,7 +83,7 @@
                         </div>
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="portal/img/icons/icon-4.png" alt="Icon">
+                                <img class="flex-shrink-0" src="public/portal/img/icons/icon-4.png" alt="Icon">
                                 <div class="ms-4">
                                     <h3>Gerência de projetos</h3>
                                     <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
@@ -94,8 +93,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <img class="img-fluid" src="portal/img/.jpg" alt="">
-                        <img class="img-fluid" src="portal/img/IMG-20220425-WA0067.jpg" alt="">
+                        <img class="img-fluid" src="public/images/t_about.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -112,70 +110,25 @@
                 <h1 class="display-5 mb-4">Somos uma equipe de arquitetura criativa , para a sua casa dos sonhos</h1>
             </div>
             <div class="row g-0 team-items">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="portal/img/team-1.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-whatsapp"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                @foreach($teams as $team)
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item position-relative">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="public/images/{{$team->foto}}" alt="{{$team->nome}}">
+                                <div class="team-social text-center">
+                                    <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square" href=""><i class="fab fa-whatsapp"></i></a>
+                                    <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light text-center p-4">
+                                <h3 class="mt-2">{{$team->nome}}</h3>
+                                <span class="text-primary">{{$team->funcao}}</span>
                             </div>
                         </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Nome arquiteto</h3>
-                            <span class="text-primary">Designação</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="portal/img/team-2.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-whatsapp"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Nome arquiteto</h3>
-                            <span class="text-primary">Designação</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="portal/img/team-3.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-whatsapp"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Nome arquiteto</h3>
-                            <span class="text-primary">Designação</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="portal/img/team-4.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-whatsapp"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Nome arquiteto</h3>
-                            <span class="text-primary">Designação</span>
-                        </div>
-                    </div>
-                </div>
+                    </div> 
+                @endforeach             
+                
             </div>
         </div>
     </div>

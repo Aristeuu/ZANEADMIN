@@ -33,10 +33,7 @@ use App\Http\Controllers\PortalController;
 Route::get('/', [PortalController::class, 'inicio'])->name('welcome');
 
 
-Route::get('/sobre', function () {
-    return view('portal.sobre');
-    //return redirect()->route('showLogin');
-})->name('sobre');
+Route::get('/sobre', [PortalController::class, 'sobre'])->name('sobre');
 
 Route::get('/servicos', function() {
     return view('portal.servico');
