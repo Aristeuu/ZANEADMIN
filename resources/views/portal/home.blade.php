@@ -6,48 +6,24 @@
             <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative" data-dot="<img src='portal/img/Carossel.jpg'>">
-                <img class="img-fluid" src="portal/img/Carossel.jpg" alt="">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-1 text-white animated slideInDown">Crie connosco a sua memória permanente.</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3"></p>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">Saber Mais</a>
+            @foreach($banners as $banner)
+                <div class="owl-carousel-item position-relative" data-dot="<img src='/images/{{$banner->foto}}'>">
+                    <img class="img-fluid" src="/images/{{$banner->foto}}" alt="">
+                    <div class="owl-carousel-inner">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="display-1 text-white animated slideInDown">{{$banner->titulo}}</h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-3"></p>
+                                    <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">Saber Mais</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='portal/img/Carrosel text.jpg'>">
-                <img class="img-fluid" src="portal/img/Carrosel text.jpg" alt="">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-1 text-white animated slideInDown">Crie connosco a sua memória permanente.</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3"></p>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">Saber Mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='portal/img/Carrossel D.jpg'>">
-                <img class="img-fluid" src="portal/img/Carrossel D.jpg" alt="">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-1 text-white animated slideInDown">Crie connosco a sua memória permanente.</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3"></p>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">Saber Mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                
+            @endforeach
+        
         </div>
     </div>
     <!-- Carousel End -->
@@ -97,7 +73,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="">
-                        <img class="img-fluid" src="portal/img/.jpg" alt="">
+                        <!--img class="img-fluid" src="portal/img/.jpg" alt=""-->
                         <img class="img-fluid" src="portal/img/about 64.jpg" alt="">
                     </div>
                 </div>
@@ -116,7 +92,7 @@
                             <h3 class="mb-0">De Trabalho</h3>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5" href="">Saiba mais</a>
+                    <!--a class="btn btn-primary py-3 px-5" href="">Saiba mais</a-->
                 </div>
             </div>
         </div>
@@ -132,72 +108,21 @@
                 <h1 class="display-5 mb-4">Focamos em arquitetura moderna e design de interiores</h1>
             </div>
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="portal/img/service-1.jpg" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="portal/img/icons/icon-5.png" alt="Icon">
-                            <h3 class="mb-3">Arquitetura</h3>
-                            <p class="mb-4"></p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Saber mais</a>
+                @foreach($categorias as $categoria)
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item d-flex position-relative text-center h-100">
+                            <img class="bg-img" src="portal/img/service-1.jpg" alt="">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="/images/{{$categoria->foto}}" alt="Icon">
+                                <h3 class="mb-3">{{$categoria->titulo}}</h3>
+                                <p class="mb-4"></p>
+                                <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Saber mais</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="portal/img/service-2.jpg" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="portal/img/icons/icon-6.png" alt="Icon">
-                            <h3 class="mb-3">Animação em 3D</h3>
-                            <p class="mb-4"></p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Saber mais</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="portal/img/service-3.jpg" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="portal/img/icons/icon-7.png" alt="Icon">
-                            <h3 class="mb-3">Planejamento de casa</h3>
-                            <p class="mb-4"></p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Saber mais</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="portal/img/service-4.jpg" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="portal/img/icons/icon-8.png" alt="Icon">
-                            <h3 class="mb-3">Design de Interiores</h3>
-                            <p class="mb-4"></p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Saber mais</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="portal/img/service-5.jpg" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="portal/img/icons/icon-9.png" alt="Icon">
-                            <h3 class="mb-3">Renovação</h3>
-                            <p class="mb-4"></p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Saber mais</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="portal/img/service-6.jpg" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="portal/img/icons/icon-10.png" alt="Icon">
-                            <h3 class="mb-3">Construção</h3>
-                            <p class="mb-4"></p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Saber mais</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                
+                
             </div>
         </div>
     </div>
@@ -263,7 +188,12 @@
             <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-lg-4">
                     <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                        @foreach($projectos as $projecto)
+                            <button class="nav-link w-100 active d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-{{$projecto->id}}" type="button">
+                                <h3 class="m-0">{{$projecto->ROW}} {{$projecto->project_titulo}}</h3>
+                            </button>
+                        @endforeach
+                        <!--button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 " data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
                             <h3 class="m-0">01. Complexo Moderno</h3>
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
@@ -274,83 +204,31 @@
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
                             <h3 class="m-0">04. Shopping</h3>
-                        </button>
+                        </button-->
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="tab-content w-100">
-                        <div class="tab-pane fade show active" id="tab-pane-1">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="portal/img/project-1.jpg"
-                                            style="object-fit: cover;" alt="">
+                        @foreach($projectos as $projecto)
+                             <div class="tab-pane fade active" id="tab-pane-{{$projecto->id}}">
+                                <div class="row g-4">
+                                    <div class="col-md-6" style="min-height: 350px;">
+                                        <div class="position-relative h-100">
+                                            <img class="position-absolute img-fluid w-100 h-100" src="/images/{{$projecto->foto}}"
+                                                style="object-fit: cover;" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="mb-3">4 anos de experiência na indústria da arquitetura</h1>
+                                        <p class="mb-4">{!!$projecto->descricao!!}</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Abordagem de Design</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Soluções Inovadoras</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Gerência de Projetos</p>
+                                        <a href="" class="btn btn-primary py-3 px-5 mt-3">Saiba mais</a>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">4 anos de experiência na indústria da arquitetura</h1>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Abordagem de Design</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Soluções Inovadoras</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Gerência de Projetos</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Saiba mais</a>
-                                </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-2">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="portal/img/project-2.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">4 anos de experiência na indústria da arquitetura</h1>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Abordagem de Design</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Soluções Inovadoras</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Gerência de Projetos</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Saiba mais</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-3">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="portal/img/project-3.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">4 anos de experiência na indústria da arquitetura</h1>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Abordagem de Design</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Soluções Inovadoras</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Gerência de Projetos</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Saiba mais</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-4">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="portal/img/project-4.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">4 anos de experiência na indústria da arquitetura</h1>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Abordagem de Design</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Soluções Inovadoras</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Gerência de Projetos</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Saiba mais</a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach                        
                     </div>
                 </div>
             </div>
@@ -367,70 +245,26 @@
                 <h1 class="display-5 mb-4">Somos uma equipe de arquitetura criativa , para a sua casa dos sonhos</h1>
             </div>
             <div class="row g-0 team-items">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="portal/img/team-1.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                @foreach($teams as $team)
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="team-item position-relative">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="/images/{{$team->foto}}" alt="">
+                                    <div class="team-social text-center">
+                                        <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="bg-light text-center p-4">
+                                    <h3 class="mt-2">{{$team->nome}}</h3>
+                                    <span class="text-primary">{{$team->funcao}}</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Nome do arquiteto</h3>
-                            <span class="text-primary">Designação</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="portal/img/team-2.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Nome do arquiteto</h3>
-                            <span class="text-primary">Designação</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="portal/img/team-3.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Nome do arquiteto</h3>
-                            <span class="text-primary">Designação</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="portal/img/team-4.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Nome do arquiteto</h3>
-                            <span class="text-primary">Designação</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                                  
+                               
             </div>
         </div>
     </div>
@@ -487,9 +321,10 @@
                         <div class="col-12 col-sm-6">
                             <select name="servico" class="form-select" style="height: 55px;">
                                 <option selected>Escolha o serviço</option>
-                                <option value="1">Serviço 1</option>
-                                <option value="2">Serviço 2</option>
-                                <option value="3">Serviço 3</option>
+                                @foreach($categorias as $categoria)
+                            <option value="{{$categoria->id}}">{{$categoria->titulo}}</option>
+                                @endforeach
+                                
                             </select>
                         </div>
                         <div class="col-12 col-sm-6">
@@ -527,16 +362,19 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Depoimento</h4>
-                <h1 class="display-5 mb-4">Milhares de clientes que confiam em nós e em nossos serviços</h1>
+                <h4 class="section-title">Parceiros</h4>
+                <!--h1 class="display-5 mb-4">Milhares de clientes que confiam em nós e em nossos serviços</h1-->
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='portal/img/testimonial-1.jpg' alt=''>">
-                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                    <h3>Nome do cliente</h3>
-                    <span class="text-primary">Profissão</span>
-                </div>
-                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='portal/img/testimonial-2.jpg' alt=''>">
+                @foreach($parceiros as $parceiro)
+                    <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='/images/{{$parceiro->foto}}' alt=''>">
+                    <p class="fs-5"></p>
+                        <h3>{{$parceiro->titulo}}</h3>
+                        <!--span class="text-primary">Profissão</span-->
+                    </div>
+                @endforeach
+                
+                <!--div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='portal/img/testimonial-2.jpg' alt=''>">
                     <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
                     <h3>Nome do cliente</h3>
                     <span class="text-primary">Profissão</span>
@@ -545,7 +383,7 @@
                     <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
                     <h3>Nome do cliente</h3>
                     <span class="text-primary">Profissão</span>
-                </div>
+                </div-->
             </div>      
         </div>
     </div>

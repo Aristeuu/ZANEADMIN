@@ -31,6 +31,15 @@
     <!-- Template Stylesheet -->
     <link href="portal/css/style.css" rel="stylesheet">
 
+     <!--Toastr-alert-->
+  
+<link rel="stylesheet" href="/admin/plugins/codemirror/theme/monokai.css">
+
+<link rel="stylesheet" href="/admin/plugins/codemirror/codemirror.css">
+<link rel="stylesheet" href="/admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+<link rel="stylesheet" href="/admin/plugins/toastr/toastr.min.css">
+
+
     @stack('style')
 </head>
 
@@ -182,6 +191,78 @@
 
     <!-- Template Javascript -->
     <script src="portal/js/main.js"></script>
+
+
+    
+<script src="/admin/plugins/codemirror/codemirror.js"></script>
+<script src="/admin/plugins/codemirror/mode/css/css.js"></script>
+<script src="/admin/plugins/codemirror/mode/xml/xml.js"></script>
+<script src="/admin/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="/admin/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="/admin/plugins/toastr/toastr.min.js"></script>
+
+
+
+  
+@if(Session::has('swalDefaultSuccess' ))    
+<button type="button" class="swalDefaultSuccess"></button>   
+<span id="mensagem" value="descricao">{!! Session::get('swalDefaultSuccess') !!}</span>       
+
+<script>
+    $(function() {
+    var Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 5000
+    });        
+
+    $('.swalDefaultSuccess').ready(function() {
+
+      var d = document.getElementById('mensagem').innerHTML;
+
+     
+        Toast.fire({
+            icon: 'success',
+            title: ' '+ d
+        })
+    });       
+});
+</script>
+
+
+@elseif(Session::has('swalDefaultError' ))   
+<button type="button" class="swalDefaultError"></button>   
+<span id="mensagem" value="descricao">{!! Session::get('swalDefaultError') !!}</span>
+
+<script>
+    $(function() {
+    var Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 5000
+    });
+    
+    $('.swalDefaultError').ready(function() {
+
+      var d = document.getElementById('mensagem').innerHTML;
+
+        Toast.fire({
+            icon: 'error',
+            title: ' '+ d
+        })
+    });
+   
+
+  
+});
+</script>
+
+
+
+@endif
+
 
     @stack('scripts')
 </body>

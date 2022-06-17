@@ -20,5 +20,10 @@ class Equipe extends Model
     {
         return $table = Equipe::select('*')->whereNUll('deleted_at')->paginate(10);
     }
+
+    public static function listar_membros()
+    {
+        
+    }
     
 }

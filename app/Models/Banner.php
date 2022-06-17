@@ -23,4 +23,12 @@ class Banner extends Model
                                 ->whereNUll('deleted_at')
                                 ->paginate(8);
     }
+
+    public static function listar_banners()
+    {
+        return $table = Banner::select('*')
+        ->whereNUll('deleted_at')
+        ->get();
+
+    }
 }

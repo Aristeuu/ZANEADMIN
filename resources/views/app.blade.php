@@ -175,10 +175,10 @@
             </a>
           </li>          
           <li class="nav-item">
-            <a href="{{route('depoimentos.show')}}" class="nav-link @if(Request()->is('admin/depoimentos')) active @endif">
+            <a href="{{route('parceiros.show')}}" class="nav-link @if(Request()->is('admin/parceiros')) active @endif">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Depoimentos                
+                Parceiros                
               </p>
             </a>
           </li>

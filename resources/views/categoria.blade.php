@@ -32,13 +32,19 @@
                 </div>
                 <div class="modal-body">
                          <!-- form start -->
-                  <form id="ctedForm" action="{{route('categorias.store')}}" method="post">
+                  <form id="ctedForm" action="{{route('categorias.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">                       
                       <div class="form-group">
                         <label for="titulo">Titulo</label>
                         <input type="text" name="titulo" class="form-control" id="titulo" placeholder="" autofocus required >
-                      </div>                                                                             
+                      </div>    
+                      
+                      <div class="form-group">
+                        <label for="exampleInputFoto">Icone</label>
+                        <input type="file" name="img" class="form-control" id="exampleInputFoto" placeholder="Fulano" required>
+                      </div>                                      
+                      
                                                           
                     </div>
                   <!-- /.card-body -->                            
@@ -89,6 +95,7 @@
                     @foreach ($data as $item)
                     <tr>                        
                         <td>#</td>
+                        <td><img src="{{asset('images')}}/{{$item->foto}}" class="rounded-circle" width="50" height="60" /></td>
                         <td>{{$item->titulo}}</td>                        
                         <td> 
                             <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modal-default-edit{{$item->id}}" onclick="editor({{$item->id}})">
@@ -112,15 +119,21 @@
                         </div>
                         <div class="modal-body">
                          
-                          <form id="editForm{{$item->id}}" action="{{route('categorias.update', $item->id)}}" method="post" >
+                          <form id="editForm{{$item->id}}" action="{{route('categorias.update', $item->id)}}" method="post" enctype="multipart/form-data" >
                             @csrf
                             @method('put')
                             <div class="card-body">                                                                  
                                   <div class="form-group">
                                     <label for="titulo">Titulo</label>
                                     <input type="text" name="titulo" class="form-control" id="titulo" placeholder="" value="{{$item->titulo}}" >
-                                  </div>                                                            
+                                  </div>                                    
+                                  <div class="form-group">
+                                    <label for="exampleInputFoto">Icone</label>
+                                    <input type="file" name="img" class="form-control" id="exampleInputFoto" placeholder="Fulano" value="{{$item->foto}}">
+                                  </div>                                      
+                                  
                             </div>
+                            
                           <!-- /.card-body -->                            
                           </form>
 

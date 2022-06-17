@@ -13,8 +13,10 @@ use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\ParceirosController;
 use App\Http\Controllers\EquipeController;
 use App\Http\Controllers\AgendamentoController;
+use App\Http\Controllers\PortalController;
 
 
 /*
@@ -28,10 +30,7 @@ use App\Http\Controllers\AgendamentoController;
 |
 */
 
-Route::get('/', function () {
-    return view('portal.home');
-    //return redirect()->route('showLogin');
-})->name('welcome');
+Route::get('/', [PortalController::class, 'inicio'])->name('welcome');
 
 
 Route::get('/sobre', function () {
@@ -126,6 +125,11 @@ Route::middleware(['auth'])->group(function(){
     Route::delete('admin/depoimentos/delete/{id}',[DepoimentosController::class,'destroy'])->name('depoimentos.delete');
 
     Route::get('admin/usuarios',[UsuariosController::class,'index'])->name('usuarios.show');
+
+    Route::get('admin/parceiros',[ParceirosController::class, 'index'])->name('parceiros.show');
+    Route::post('admin/parceiros',[ParceirosController::class, 'store'])->name('parceiros.store');
+    Route::put('admin/parceiros/update/{id}',[ParceirosController::class, 'update'])->name('parceiros.update');
+    Route::delete('admin/parceiros/delete/{id}',[ParceirosController::class, 'destroy'])->name('parceiros.delete');
 
     
 

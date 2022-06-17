@@ -13,12 +13,18 @@ class Categoria extends Model
 
     protected $table = 'categoria';
 
-    protected $fillable = ['titulo'];
+    protected $fillable = ['titulo','foto'];
 
 
     public static function getAll()
     {
         return $table = Categoria::select('*')->whereNull('deleted_at')->paginate(5);
     }
+
+    public static function listar_categorias()
+    {
+        return $table = Categoria::select('*')->whereNull('deleted_at')->get();
+    }
+    
     
 }

@@ -40,16 +40,44 @@ class CategoriaController extends Controller
     {
         try {
 
+            //code...
+            $nameFile_F  = null;
+            if ($file=$request->file('img')) {
+
+                //foreach($files as $file){
+                    
+                $namePhoto = uniqid(date('HisYmd'));
+                // Recupera a extensão do arquivo
+                $extension = $file->extension();
+
+                // Define finalmente o nome
+                $nameFile_F = "{$namePhoto}.{$extension}";
+
+                $name=$file->getClientOriginalName();
+                //$file->move('image',$name);
+
+                // Faz o upload:
+                //$upload = $request->anexo->storeAs('public/recibos', $nameFile);
+                                                   
+                 
+                    
+                $dados = [
+                    "titulo" => $request->titulo,
+                    "foto" => $nameFile_F,
+                ];
+    
+                    $id = Categoria::create($dados)->id;
+
+               
+                $file->move(public_path('images/'), $nameFile_F);
+                //dd($id);
             
-            $dados = [
-                "titulo" => $request->titulo,                
-            ];
 
-            $id = Categoria::create($dados)->id;
+
           
-            $request->session()->flash('swalDefaultSuccess', 'Dados adicionados com sucesso.'); 
-            return redirect()->back();
-
+                $request->session()->flash('swalDefaultSuccess', 'Dados adicionados com sucesso.');
+                return redirect()->back();
+            }
 
         } catch (\Throwable $th) {
             throw $th;
@@ -89,21 +117,60 @@ class CategoriaController extends Controller
     {
         try {
 
-            
-            $dados = [
-                "titulo" => $request->titulo,               
-                
-            ];
-           
-            $data = Categoria::find($id);
-            $data->titulo    = $dados['titulo'];
-           
-            
-            $data->update();
-         
-            $request->session()->flash('swalDefaultSuccess', 'Dados atualizados com sucesso.'); 
-            return redirect()->back();
 
+            $nameFile_F  = null;
+            if ($file=$request->file('img')) {
+
+                //foreach($files as $file){
+                    
+                $namePhoto = uniqid(date('HisYmd'));
+
+                // Recupera a extensão do arquivo
+                $extension = $file->extension();
+
+                // Define finalmente o nome
+                $nameFile_F = "{$namePhoto}.{$extension}";
+
+                $name=$file->getClientOriginalName();
+                //$file->move('image',$name);
+
+                // Faz o upload:
+                //$upload = $request->anexo->storeAs('public/recibos', $nameFile);
+                    
+                     
+                $dados = [
+                        "titulo" => $request->titulo,                        
+                        "foto" => $nameFile_F,                                        
+                        
+                    ];              
+           
+                $data = Categoria::find($id);
+                $data->titulo    = $dados['titulo'];
+                $data->foto      = $dados['foto'];
+            
+                $data->update();
+                $file->move(public_path('images/'), $nameFile_F);
+         
+                $request->session()->flash('swalDefaultSuccess', 'Dados atualizados com sucesso.');
+                return redirect()->back();
+            }
+            else{
+
+                $dados = [
+                    "titulo" => $request->titulo,
+                    
+                ];
+               
+                    $data = Categoria::find($id);
+                    $data->titulo    = $dados['titulo'];
+               
+                
+                    $data->update();
+             
+                    $request->session()->flash('swalDefaultSuccess', 'Dados atualizados com sucesso.');
+                    return redirect()->back();
+
+            }
 
         } catch (\Throwable $th) {
             throw $th;

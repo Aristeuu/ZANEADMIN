@@ -28,6 +28,7 @@ class AgendamentoController extends Controller
 
         Mail::to('aristeuwalker@gmail.com')->send(new Agendamento($data));
 
+        $request->session()->flash('swalDefaultSuccess', 'Seu email foi enviado com sucesso'); 
         return redirect()->back();
 
 

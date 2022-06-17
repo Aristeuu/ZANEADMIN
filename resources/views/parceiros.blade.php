@@ -10,7 +10,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
         <div class="col-sm-6">
-            <h1>Adicionar Membro <a href="http://" data-toggle="modal" onclick="editor(6)" data-target="#modal-default"><i class="fas fa-plus mr-1" alt="Novo" title="Novo"></i></a>
+            <h1>Adicionar Parceiros <a href="http://" data-toggle="modal" onclick="editor(6)" data-target="#modal-default"><i class="fas fa-plus mr-1" alt="Novo" title="Novo"></i></a>
                 
             </h1>
         </div>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="modal-body">
                          <!-- form start -->
-                  <form id="ctedForm" action="{{route('equipe.store')}}" method="post" enctype="multipart/form-data">
+                  <form id="ctedForm" action="{{route('parceiros.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                       <div class="form-group">
@@ -41,28 +41,26 @@
                       </div>                                      
                         
                       <div class="form-group">
-                        <label for="titulo">Nome</label>
-                        <input type="text" name="nome" class="form-control" id="titulo" placeholder="" required>
-                      </div>
-                      
-                      <div class="form-group">
-                        <label for="titulo">Função</label>
-                        <input type="text" name="funcao" class="form-control" id="funcao" placeholder="" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="titulo">Facebook</label>
-                        <input type="text" name="facebook" class="form-control" id="facebook" placeholder="">
-                      </div>
-                      <div class="form-group">
-                        <label for="titulo">Twitter</label>
-                        <input type="text" name="twitter" class="form-control" id="twitter" placeholder="" >
-                      </div>
-                      <div class="form-group">
-                        <label for="titulo">Instagram</label>
-                        <input type="text" name="instagram" class="form-control" id="instagram" placeholder="">
-                      </div>
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" class="form-control" id="nome" placeholder="" required>
+                      </div>                                                                                 
+                      <!--div class="form-group">
+                        <label for="exampleInputEmail1">Descrição</label>
+                        <textarea id="summernote6" name="texto">
+                          Place <em>some</em> <u>text</u> <strong>here</strong>
+                        </textarea>
+                        </div--> 
+                        <div class="form-group">
+                            <label for="nome">Facebook</label>
+                            <input type="text" name="facebook" class="form-control" id="" placeholder="">
+                          </div>                                                                                 
 
-                                                            
+                          <div class="form-group">
+                            <label for="nome">Instagram</label>
+                            <input type="text" name="instagram" class="form-control" id="" placeholder="">
+                          </div>                                                                                 
+                          
+                                                               
                     </div>
                   <!-- /.card-body -->                            
                   </form>
@@ -92,7 +90,7 @@
             <div class="card-header">
                 <div class="card-tools">
                     <ul class="pagination pagination-sm float-right">             
-                      {{ $equipes->links() }}
+                      
                     </ul>
                     
                   </div>
@@ -102,27 +100,24 @@
                 <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                    <th>Foto</th>
+                    <th>Imagem</th>
                     <th>Nome</th>                    
-                    <th>Função</th>
-                    <th>Rede Sociais</th>
+                    <th>Descrição</th>
+                    <th>Links</th>
                     <th>Opções</th>
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($equipes as $item)
+                    @foreach ($data as $item)
                     <tr>                        
-                        <td><img src="{{asset('images')}}/{{$item->foto}}" class="rounded-circle" width="50" height="60" /></td>
-                        <td>{{$item->nome}}</td>
-                        <td>{{$item->funcao}}</td>
+                        <td><img src="{{asset('/images')}}/{{$item->foto}}" class="rounded-circle" width="50" height="60" /></td>
+                        <td>{{$item->titulo}}</td>
+                        <td>{!!$item->texto!!}</td>  
                         <td>
                             <a class="btn btn-square" href="{{$item->facebook}}"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square" href="{{$item->twitter}}"><i class="fab fa-twitter"></i></a>
+                            
                             <a class="btn btn-square" href="{{$item->instagram}}"><i class="fab fa-instagram"></i></a>
-                            
-                            
-                        </td>
-                       
+                        </td>                                               
                         <td> 
                             <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modal-default-edit{{$item->id}}" onclick="editor({{$item->id}})">
                                 <i class="fas fa-pen"></i>
@@ -145,37 +140,35 @@
                         </div>
                         <div class="modal-body">
                          
-                          <form id="editForm{{$item->id}}" action="{{route('equipe.update', $item->id)}}" method="post" enctype="multipart/form-data">
+                          <form id="editForm{{$item->id}}" action="{{route('parceiros.update', $item->id)}}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('put')
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputFoto">Imagem</label>
-                                    <input type="file" name="img" class="form-control" id="exampleInputFoto" placeholder="Fulano" >
+                                    <input type="file" name="img" class="form-control" id="exampleInputFoto" placeholder="Fulano">
                                   </div>                                      
                                     
                                   <div class="form-group">
-                                    <label for="titulo">Nome</label>
-                                    <input type="text" name="nome" class="form-control" id="titulo" placeholder="" value={{$item->nome}} required>
-                                  </div>
-                                  
-                                  <div class="form-group">
-                                    <label for="titulo">Função</label>
-                                    <input type="text" name="funcao" class="form-control" id="funcao" placeholder="" value={{$item->funcao}} required>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="titulo">Facebook</label>
-                                    <input type="text" name="facebook" class="form-control" id="facebook" placeholder="" value={{$item->facebook}} >
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="titulo">Twitter</label>
-                                    <input type="text" name="twitter" class="form-control" id="twitter" placeholder="" value={{$item->twitter}} >
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="titulo">Instagram</label>
-                                    <input type="text" name="instagram" class="form-control" id="instagram" placeholder="" value={{$item->instagram}} >
-                                  </div>
+                                    <label for="nome">Titulo</label>
+                                    <input type="text" name="nome" class="form-control" id="nome" placeholder="" value="{{$item->titulo}}" >
+                                  </div>                                                                                 
+                                  <!--div class="form-group">
+                                    <label for="exampleInputEmail1">Descrição</label>
+                                    <textarea id="summernote{--{$item->id}}" name="texto">
+                                        {--!!$item->texto!!--}
+                                    </textarea>
+                                    </div-->   
+                                    
+                                    <div class="form-group">
+                                        <label for="nome">Facebook</label>
+                                        <input type="text" name="facebook" class="form-control" id="" placeholder="" value="{{$item->facebook}}">
+                                      </div>                                                                                 
             
+                                      <div class="form-group">
+                                        <label for="nome">Instagram</label>
+                                        <input type="text" name="instagram" class="form-control" id="" placeholder="" value="{{$item->instagram}}">
+                                      </div>    
                             </div>
                           <!-- /.card-body -->                            
                           </form>
@@ -202,7 +195,7 @@
                               </button>
                             </div>
                             <div class="modal-body">
-                              <form action="{{route('equipe.delete', $item->id)}}" method="post" id="destroyForm{{$item->id}}">
+                              <form action="{{route('parceiros.delete', $item->id)}}" method="post" id="destroyForm{{$item->id}}">
                                 @method('delete')
                                 @csrf
                               </form>
