@@ -32,7 +32,7 @@
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <h4 class="section-title">Sobre Nós</h4>
                     <h1 class="display-5 mb-4">Prototipos ARQ </h1>
-                    <p>Somos uma empresa de direito angolano inscrita sob o número de identificação fiscal  5417650471. Com actuação nas áreas de Arquitectura , Construção civil e Carpintaria.</p>
+                    <p>Somos uma empresa de direito angolano inscrita sob o número de identificação fiscal  <strong>5417650471</strong>. Com actuação nas áreas de Arquitectura , Construção civil e Carpintaria.</p>
                     <p class="mb-4">Possuimos capacidade técnica e mão de obra especializada nos campos de reformas , restauro , consultoria técnica , fiscalização e elaboração de projectos de arquitetura e engenharias.
 
                         Garantido soluções inteligentes e econômicas aos nossos parceiros.
@@ -47,7 +47,7 @@
                             <h3 class="mb-0">De Trabalho</h3>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5" href="">Saiba mais</a>
+                    <a class="btn btn-primary py-3 px-5" href="#">Saiba mais</a>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
                                 <img class="flex-shrink-0" src="public/portal/img/icons/icon-2.png" alt="Icon">
                                 <div class="ms-4">
                                     <h3>Abordagem de design</h3>
-                                    <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                                    <!--p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p-->
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                                 <img class="flex-shrink-0" src="public/portal/img/icons/icon-3.png" alt="Icon">
                                 <div class="ms-4">
                                     <h3>Soluções Inovadoras</h3>
-                                    <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                                    <!--p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p-->
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                                 <img class="flex-shrink-0" src="public/portal/img/icons/icon-4.png" alt="Icon">
                                 <div class="ms-4">
                                     <h3>Gerência de projetos</h3>
-                                    <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                                    <!--p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p-->
                                 </div>
                             </div>
                         </div>
@@ -135,5 +135,13 @@
     <!-- Team End -->
         
 
+    
+@endpush
+
+@push('servicos')
+
+        @foreach ($categorias as $categoria)
+                <a class="btn btn-link" href="{{$categoria->id}}">{{$categoria->titulo}}</a>            
+        @endforeach
     
 @endpush

@@ -392,4 +392,13 @@
 @endpush
 
 
+@push('servicos')
+
+        @foreach ($categorias as $categoria)
+                <a class="btn btn-link" href="{{$categoria->id}}">{{$categoria->titulo}}</a>            
+        @endforeach
+    
+@endpush
+
+
 

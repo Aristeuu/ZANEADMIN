@@ -132,11 +132,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-light mb-4">Serviços</h3>
-                        <a class="btn btn-link" href="">Arquitetura</a>
-                        <a class="btn btn-link" href="">Animação 3D</a>
-                        <a class="btn btn-link" href="">Planejamento da Casa</a>
-                        <a class="btn btn-link" href="">Design de Interiores</a>
-                        <a class="btn btn-link" href="">Construção</a>
+                        @stack('servicos')                       
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-light mb-4">Links rápidos</h3>
@@ -144,7 +140,7 @@
                         <a class="btn btn-link" href="">Entre em  connosco</a>
                         <a class="btn btn-link" href="">Nossos Serviços</a>
                         <a class="btn btn-link" href="">Termos & Condições</a>
-                        <a class="btn btn-link" href="">Suporte</a>
+                        <!--a class="btn btn-link" href="">Suporte</a-->
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-light mb-4">Boletim informativo</h3>
