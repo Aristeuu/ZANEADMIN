@@ -16,6 +16,7 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ParceirosController;
 use App\Http\Controllers\EquipeController;
 use App\Http\Controllers\AgendamentoController;
+use App\Http\Controllers\FotoController;
 use App\Http\Controllers\PortalController;
 
 
@@ -108,6 +109,12 @@ Route::middleware(['auth'])->group(function(){
     Route::post('admin/categorias',[CategoriaController::class, 'store'])->name('categorias.store');
     Route::put('admin/categorias/update/{id}',[CategoriaController::class, 'update'])->name('categorias.update');
     Route::delete('admin/categorias/delete/{id}',[CategoriaController::class, 'destroy'])->name('categorias.delete');
+
+
+    Route::get('admin/fotos',[FotoController::class, 'index'])->name('fotos.show');
+    Route::post('admin/fotos',[FotoController::class, 'store'])->name('fotos.store');
+    Route::put('admin/fotos/update/{id}',[FotoController::class, 'update'])->name('fotos.update');
+    Route::delete('admin/fotos/delete/{id}',[FotoController::class, 'destroy'])->name('fotos.delete');
 
     Route::get('admin/equipe',[EquipeController::class, 'index'])->name('equipe.show');
     Route::post('admin/equipe',[EquipeController::class, 'store'])->name('equipe.store');

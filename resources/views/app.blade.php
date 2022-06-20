@@ -167,6 +167,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{route('fotos.show')}}" class="nav-link @if(Request()->is('admin/fotos')) active @endif">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Fotos                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{route('produtos.show')}}" class="nav-link @if(Request()->is('admin/projectos')) active @endif">
               <i class="nav-icon fas fa-th"></i>
               <p>
