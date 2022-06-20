@@ -122,7 +122,7 @@
                         </div>
                         <div class="modal-body">
                          
-                          <form id="editForm{{$item->id}}" action="{{route('produtos.update', $item->id)}}" method="post" enctype="multipart/form-data">
+                          <form id="editForm{{$item->id}}" action="{{route('fotos.update', $item->id)}}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('put')
                             <div class="card-body">
@@ -167,7 +167,7 @@
                               </button>
                             </div>
                             <div class="modal-body">
-                              <form action="{{route('produtos.delete', $item->id)}}" method="post" id="destroyForm{{$item->id}}">
+                              <form action="{{route('fotos.delete', $item->id)}}" method="post" id="destroyForm{{$item->id}}">
                                 @method('delete')
                                 @csrf
                               </form>

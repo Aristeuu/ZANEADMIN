@@ -20,7 +20,7 @@ class Foto extends Model
 
     public static function get_all()
     {
-        return $table = foto::select('fotos.foto','categoria.titulo')
+        return $table = foto::select('fotos.id','fotos.foto','categoria.titulo')
                             ->join('categoria','categoria.id', '=','fotos.categoria_id')
                             ->whereNull('categoria.deleted_at')->paginate(10);
     }
