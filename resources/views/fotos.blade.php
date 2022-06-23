@@ -98,8 +98,7 @@
                     <tr>                        
                         <td><img src="{{asset('images')}}/{{$item->foto}}" class="rounded-circle" width="50" height="60" alt="Unknown" /></td>
                        
-                        <td>{{$item->titulo}}                        
-                        <td>{!!$item->descricao!!}</td>                                               
+                        <td>{{$item->titulo}}</td>                                                                                               
                         <td> 
                             <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modal-default-edit{{$item->id}}" onclick="editor({{$item->id}})">
                                 <i class="fas fa-pen"></i>

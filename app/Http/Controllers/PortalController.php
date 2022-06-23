@@ -19,7 +19,7 @@ class PortalController extends Controller
      */
     public function inicio()
     {
-        $banners   = Banner::listar_banners();
+        $banners    = Banner::listar_banners();
         $categorias = Categoria::listar_categorias();
         $projectos  = Projects::listar_projectos();
         $teams      = Equipe::all();

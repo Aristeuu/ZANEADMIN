@@ -198,4 +198,69 @@ class CategoriaController extends Controller
         }
 
     }
+
+    public function setBackground(Request $request, $id)
+    {
+        try {
+
+
+            $nameFile_F  = null;
+            if ($file=$request->file('img')) {
+
+                //foreach($files as $file){
+                    
+                $namePhoto = uniqid(date('HisYmd'));
+
+                // Recupera a extensão do arquivo
+                $extension = $file->extension();
+
+                // Define finalmente o nome
+                $nameFile_F = "{$namePhoto}.{$extension}";
+
+                $name=$file->getClientOriginalName();
+                //$file->move('image',$name);
+
+                // Faz o upload:
+                //$upload = $request->anexo->storeAs('public/recibos', $nameFile);
+                    
+                     
+                $dados = [
+                        
+                        "background" => $nameFile_F,                                        
+                        
+                    ];              
+           
+                $data = Categoria::find($id);
+                $data->background    = $dados['background'];
+               
+            
+                $data->update();
+                $file->move(public_path('images/'), $nameFile_F);
+         
+                $request->session()->flash('swalDefaultSuccess', 'Dados atualizados com sucesso.');
+                return redirect()->back();
+            }
+            else{
+
+                /*$dados = [
+                    "titulo" => $request->titulo,
+                    
+                ];
+               
+                    $data = Categoria::find($id);
+                    $data->titulo    = $dados['titulo'];
+               
+                *
+                    $data->update();
+             */
+                    $request->session()->flash('swalDefaultSuccess', 'Dados atualizados com sucesso.');
+                    return redirect()->back();
+
+            }
+
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
 }

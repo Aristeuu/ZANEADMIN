@@ -13,7 +13,7 @@ class Categoria extends Model
 
     protected $table = 'categoria';
 
-    protected $fillable = ['titulo','foto'];
+    protected $fillable = ['titulo','foto','background'];
 
 
     public static function getAll()

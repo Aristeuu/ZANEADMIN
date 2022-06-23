@@ -147,7 +147,7 @@ class FotoController extends Controller
                     ];
 
                    
-                    $data = fotos::find($id);                                     
+                    $data = foto::find($id);                                     
                     $data->foto        = $dados['foto'];
                     $data->categoria_id      = $dados['categoria_id'];
                     
@@ -169,7 +169,7 @@ class FotoController extends Controller
                 ];
 
                
-                $data = fotos::find($id);
+                $data = foto::find($id);
                                
                 $data->categoria_id      = $dados['categoria_id'];
                
@@ -196,7 +196,7 @@ class FotoController extends Controller
      */
     public function destroy($id)
     {
-        $delete = fotos::find($id)->delete();
+        $delete = foto::find($id)->delete();
         if($delete)
         {
             $request->session()->flash('swalDefaultSuccess', 'Registo eliminado com sucesso');

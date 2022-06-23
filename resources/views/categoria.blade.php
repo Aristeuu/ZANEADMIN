@@ -101,12 +101,56 @@
                             <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modal-default-edit{{$item->id}}" onclick="editor({{$item->id}})">
                                 <i class="fas fa-pen"></i>
                             </button>
+                            <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modal-default-back{{$item->id}}"  title="">
+                              <i class="fas fa-eye"></i>
+                          </button>
                             <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modal-default-delete{{$item->id}}"  title="Remove">
                                 <i class="fas fa-times"></i>
                             </button>
                         </td>  
                     </tr>
                     
+                     <!--back-->                    
+                  <div class="modal fade" id="modal-default-back{{$item->id}}">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Editando</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                         
+                          <form id="edForm{{$item->id}}" action="{{route('categorias.background', $item->id)}}" method="post" enctype="multipart/form-data" >
+                            @csrf
+                            @method('put')
+                            <div class="card-body">                                                               
+                                                                 
+                                  <div class="form-group">
+                                    <label for="exampleInputFoto">Fundo</label>
+                                    <input type="file" name="img" class="form-control" id="exampleInputFoto" placeholder="Fulano" value="{{$item->foto}}">
+                                  </div>                                      
+                                  
+                            </div>
+                            
+                          <!-- /.card-body -->                            
+                          </form>
+
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary" form="edForm{{$item->id}}">Save changes</button>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
+                   
+
+
+
                     <!--edit-->                    
                   <div class="modal fade" id="modal-default-edit{{$item->id}}">
                     <div class="modal-dialog modal-lg">
