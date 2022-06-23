@@ -111,7 +111,7 @@
                 @foreach($categorias as $categoria)
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item d-flex position-relative text-center h-100">
-                            <img class="bg-img" src="public/img/{{$categoria->background}}" alt="">
+                            <img class="bg-img" src="public/images/{{$categoria->background}}" alt="">
                             <div class="service-text p-5">
                                 <img class="mb-4" src="public/images/{{$categoria->foto}}" alt="Icon">
                                 <h3 class="mb-3">{{$categoria->titulo}}</h3>
