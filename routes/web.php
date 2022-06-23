@@ -36,9 +36,7 @@ Route::get('/', [PortalController::class, 'inicio'])->name('welcome');
 
 Route::get('/sobre', [PortalController::class, 'sobre'])->name('sobre');
 
-Route::get('/servicos', function() {
-    return view('portal.servico');
-})->name('servicos');
+Route::get('/servicos', [PortalController::class, 'servicos'])->name('servicos');
 
 
 Route::get('/feature', function(){
