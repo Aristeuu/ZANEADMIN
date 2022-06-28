@@ -25,6 +25,11 @@
             <h4 class="section-title">Nossos serviços</h4>
             <h1 class="display-5 mb-4">Focamos em arquitetura moderna e design de interiores</h1>
         </div>
+        <div class="row justify-content-md-center">
+            <div class="col-sm">col-sm</div>
+            <div class="col-sm">col-sm</div>
+            <div class="col-sm">col-sm</div>
+          </div>
         <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
             <div class="col-lg-4">
                 <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
