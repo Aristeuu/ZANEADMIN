@@ -26,9 +26,14 @@
             <h1 class="display-5 mb-4">Focamos em arquitetura moderna e design de interiores</h1>
         </div>
         <div class="row justify-content-md-center">
-            <div class="col-sm">col-sm</div>
-            <div class="col-sm">col-sm</div>
-            <div class="col-sm">col-sm</div>
+            @foreach ($projectos as $project)              
+           
+                <div class="col-sm" style="min-height: 350px;">>
+                    <img class="position-absolute img-fluid w-100 h-100" src="public/images/{{$project->foto}}"
+                    style="object-fit: cover;" alt="">
+                </div>
+            @endforeach
+            
           </div>
         <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
             <div class="col-lg-4">
