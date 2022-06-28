@@ -46,6 +46,19 @@ class PortalController extends Controller
 
         return view('portal.servico',compact('teams','categorias'));
     }
+
+    public function features()
+    {
+        $categorias = Categoria::listar_categorias();
+        return view('portal.feature',compact('categorias'));
+    }
+
+    public function projectos()
+    {
+        $categorias = Categoria::listar_categorias();
+        $projectos  = Projects::all();
+        return view('portal.feature',compact('categorias','projectos'));
+    }
     /**
      * Show the form for creating a new resource.
      *

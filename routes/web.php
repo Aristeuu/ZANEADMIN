@@ -39,13 +39,9 @@ Route::get('/sobre', [PortalController::class, 'sobre'])->name('sobre');
 Route::get('/servicos', [PortalController::class, 'servicos'])->name('servicos');
 
 
-Route::get('/feature', function(){
-    return view('portal.feature');
-})->name('feature');
+Route::get('/feature', [PortalController::class, 'features'])->name('feature');
 
-Route::get('/projectos', function(){
-    return view('portal.projectos');
-})->name('projectos');
+Route::get('/projectos',[PortalController::class, 'projectos'] )->name('projectos');
 
 Route::get('/equipe', function(){
     return view('portal.equipe');
