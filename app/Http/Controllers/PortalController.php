@@ -32,10 +32,10 @@ class PortalController extends Controller
 
     public function sobre()
     {
-        //$teams      = Equipe::all();
+        $teams      = Equipe::all();
         $categorias = Categoria::listar_categorias();   
 
-        return view('portal.sobre',compact('categorias'));
+        return view('portal.sobre',compact('categorias','teams'));
     }
 
 
