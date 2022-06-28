@@ -188,8 +188,11 @@
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @foreach ($projectos as $projecto)
-                    <div class="carousel-item active">
-                        <img src="/public/images/{{$projecto->foto}}" class="d-block w-100" alt="...">
+                    <div class="carousel-item active">                        
+                        <div class="position-relative h-100">
+                            <img class="position-absolute img-fluid w-100 h-100" src="public/images/{{$projecto->foto}}"
+                                style="object-fit: cover;" alt="">
+                        </div>
                       </div>
                     @endforeach
                 
