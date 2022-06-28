@@ -179,24 +179,23 @@
 
     <!-- Project Start -->
     <div class="container-xxl project py-5">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-            </div>
-          </div>
+        
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h4 class="section-title">Nossos Projectos</h4>
                 <h1 class="display-5 mb-4">Visite os nossos últimos projetos e os nossos trabalhos inovadores</h1>
             </div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @foreach ($projectos as $projecto)
+                    <div class="carousel-item active">
+                        <img src="/public/images/{{$projecto->foto}}" class="d-block w-100" alt="...">
+                      </div>
+                    @endforeach
+                
+                                   
+                </div>
+              </div>
            
             <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
                 
