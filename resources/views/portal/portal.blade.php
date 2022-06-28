@@ -22,23 +22,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 
     <!-- Libraries Stylesheet -->
-    <link href="public/portal/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="public/portal/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="public/portal/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="/public/portal/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/public/portal/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/public/portal/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="public/portal/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/portal/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="public/portal/css/style.css" rel="stylesheet">
+    <link href="/public/portal/css/style.css" rel="stylesheet">
 
      <!--Toastr-alert-->
   
-<link rel="stylesheet" href="public//admin/plugins/codemirror/theme/monokai.css">
+<link rel="stylesheet" href="/public//admin/plugins/codemirror/theme/monokai.css">
 
-<link rel="stylesheet" href="public//admin/plugins/codemirror/codemirror.css">
-<link rel="stylesheet" href="public//admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
-<link rel="stylesheet" href="public//admin/plugins/toastr/toastr.min.css">
+<link rel="stylesheet" href="/public//admin/plugins/codemirror/codemirror.css">
+<link rel="stylesheet" href="/public//admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+<link rel="stylesheet" href="/public//admin/plugins/toastr/toastr.min.css">
 
 
     @stack('style')
@@ -178,26 +178,26 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="public/portal/lib/wow/wow.min.js"></script>
-    <script src="public/portal/lib/easing/easing.min.js"></script>
-    <script src="public/portal/lib/waypoints/waypoints.min.js"></script>
-    <script src="public/portal/lib/counterup/counterup.min.js"></script>
-    <script src="public/portal/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="public/portal/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="public/portal/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="public/portal/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="/public/portal/lib/wow/wow.min.js"></script>
+    <script src="/public/portal/lib/easing/easing.min.js"></script>
+    <script src="/public/portal/lib/waypoints/waypoints.min.js"></script>
+    <script src="/public/portal/lib/counterup/counterup.min.js"></script>
+    <script src="/public/portal/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/public/portal/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/public/portal/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/public/portal/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="public/portal/js/main.js"></script>
+    <script src="/public/portal/js/main.js"></script>
 
 
     
-<script src="public//admin/plugins/codemirror/codemirror.js"></script>
-<script src="public//admin/plugins/codemirror/mode/css/css.js"></script>
-<script src="public//admin/plugins/codemirror/mode/xml/xml.js"></script>
-<script src="public//admin/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-<script src="public//admin/plugins/sweetalert2/sweetalert2.min.js"></script>
-<script src="public//admin/plugins/toastr/toastr.min.js"></script>
+<script src="/public/admin/plugins/codemirror/codemirror.js"></script>
+<script src="/public/admin/plugins/codemirror/mode/css/css.js"></script>
+<script src="/public/admin/plugins/codemirror/mode/xml/xml.js"></script>
+<script src="/public/admin/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="/public/admin/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="/public/admin/plugins/toastr/toastr.min.js"></script>
 
 
 
