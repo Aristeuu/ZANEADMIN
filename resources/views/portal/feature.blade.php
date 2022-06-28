@@ -23,7 +23,7 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h4 class="section-title">Why Choose Us!</h4>
+                    <h4 class="section-title"></h4>
                     <h1 class="display-5 mb-4">Por que deveria confiar em nós? Saiba mais sobre nós!</h1>
                     <p class="mb-4">Satisfação dos clientes, parceiros e colaboradores através de melhoria continua , relacionamento próximo , confiança e transparência mútua com zelo e dedicação a fim de contribuir para o crescimento mais acelerado do país.</p>
                     <div class="row g-4">
@@ -31,7 +31,7 @@
                             <div class="d-flex align-items-start">
                                 <img class="flex-shrink-0" src="public/portal/img/icons/icon-2.png" alt="Icon">
                                 <div class="ms-4">
-                                    <h3>Abordagem de design/h3>
+                                    <h3>Abordagem de design</h3>
                                     <!--p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p-->
                                 </div>
                             </div>
