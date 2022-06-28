@@ -188,66 +188,14 @@
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @foreach ($projectos as $projecto)
-                    <div class="carousel-item active">                        
-                        <div class="position-relative h-100">
-                            <img class="position-absolute img-fluid w-100 h-100" src="public/images/{{$projecto->foto}}"
-                                style="object-fit: cover;" alt="">
-                        </div>
+                    <div class="carousel-item active">
+                        <img src="/public/images/{{$projecto->foto}}" class="d-block w-70" alt="...">
                       </div>
                     @endforeach
                 
                                    
                 </div>
-              </div>
-           
-            <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-                
-                <div class="col-lg-4">
-                    <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
-                        @foreach($projectos as $projecto)
-                            <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-{{$projecto->id}}" type="button">
-                                <h3 class="m-0">{{$projecto->ROW}} {{$projecto->project_titulo}}</h3>
-                            </button>
-                        @endforeach
-                        <!--button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 " data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
-                            <h3 class="m-0">01. Complexo Moderno</h3>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
-                            <h3 class="m-0">02. Hotel Real</h3>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
-                            <h3 class="m-0">03. Edifício </h3>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
-                            <h3 class="m-0">04. Shopping</h3>
-                        </button-->
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="tab-content w-100">
-                        @foreach($projectos as $projecto)
-                             <div class="tab-pane fade" id="tab-pane-{{$projecto->id}}">
-                                <div class="row g-4">
-                                    <div class="col-md-6" style="min-height: 350px;">
-                                        <div class="position-relative h-100">
-                                            <img class="position-absolute img-fluid w-100 h-100" src="public/images/{{$projecto->foto}}"
-                                                style="object-fit: cover;" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h1 class="mb-3">4 anos de experiência na indústria da arquitetura</h1>
-                                        <p class="mb-4">{!!$projecto->descricao!!}</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Abordagem de Design</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Soluções Inovadoras</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Gerência de Projetos</p>
-                                        <a href="" class="btn btn-primary py-3 px-5 mt-3">Saiba mais</a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach                        
-                    </div>
-                </div>
-            </div>
+              </div>           
         </div>
     </div>
     <!-- Project End -->
