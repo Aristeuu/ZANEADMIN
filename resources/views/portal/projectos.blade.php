@@ -28,9 +28,11 @@
         <div class="row justify-content-md-center">
             @foreach ($projectos as $project)              
            
-                <div class="col-sm" style="min-height: 350px;">>
-                    <img class="position-absolute img-fluid w-100 h-100" src="public/images/{{$project->foto}}"
-                    style="object-fit: cover;" alt="">
+                <div class="col-sm" style="min-height: 350px;">                    
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="public/images/{{$project->foto}}"
+                            style="object-fit: cover;" alt="">
+                    </div>
                 </div>
             @endforeach
             
