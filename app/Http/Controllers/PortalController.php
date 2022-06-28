@@ -66,6 +66,18 @@ class PortalController extends Controller
         $teams      = Equipe::all();
         return view('portal.equipe',compact('categorias','teams'));
     }    
+    public function reuniao()
+    {
+        $categorias = Categoria::listar_categorias();
+        return view('portal.reuniao',compact('categorias'));
+    }
+    public function projectosShow($id)
+    {
+        $categorias = Categoria::listar_categorias();
+        $projectos  = Projects::listar_categoriaProject($id);
+        return view('portal.projectosShow',compact('categorias','projectos'));
+
+    }
     /**
      * Show the form for creating a new resource.
      *

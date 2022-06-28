@@ -116,7 +116,7 @@
                                 <img class="mb-4" src="public/images/{{$categoria->foto}}" alt="Icon">
                                 <h3 class="mb-3">{{$categoria->titulo}}</h3>
                                 <p class="mb-4"></p>
-                                <a class="btn" href="{{$categoria->id}}"><i class="fa fa-plus text-primary me-3"></i>Saber mais</a>
+                                <a class="btn" href="{{route('projectos.show',$categoria->id)}}"><i class="fa fa-plus text-primary me-3"></i>Saber mais</a>
                             </div>
                         </div>
                     </div>
@@ -395,7 +395,7 @@
 @push('servicos')
 
         @foreach ($categorias as $categoria)
-                <a class="btn btn-link" href="{{$categoria->id}}">{{$categoria->titulo}}</a>            
+                <a class="btn btn-link" href="{{route('projectos.show',$categoria->id)}}">{{$categoria->titulo}}</a>            
         @endforeach
     
 @endpush

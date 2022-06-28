@@ -45,9 +45,9 @@ Route::get('/projectos',[PortalController::class, 'projectos'] )->name('projecto
 
 Route::get('/equipe', [PortalController::class,'equipe'])->name('equipe');
 
-Route::get('/reuniao', function(){
-    return view('portal.reuniao');
-})->name('reuniao');
+Route::get('/reuniao', [[PortalController::class,'reuniao']])->name('reuniao');
+
+Route::get('/projectos/{id}',[PortalController::class,'projectosShow'])->name('projectos.show');
 
 
 

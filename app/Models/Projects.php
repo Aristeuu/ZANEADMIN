@@ -31,6 +31,15 @@ class Projects extends Model
                                 ->WhereNUll('projectos.deleted_at')
                                 ->orderBy('projectos.id','DESC')
                                 ->paginate(4);
-                            }
+                             
+    }                       
+    public static function listar_categoriaProject($id)
+    {
+        return $table = Projects::select('projectos.id','projectos.titulo AS project_titulo','projectos.descricao','projectos.foto','categoria.id AS categoria_id','categoria.titulo AS categoria_titulo')
+        ->join('categoria','categoria.id', '=','projectos.categoria_id')
+        ->WhereNUll('projectos.deleted_at')
+        ->where('projectos.categoria_id',$id)
+        ->get();
+    } 
 
 }
