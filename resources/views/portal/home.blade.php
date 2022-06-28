@@ -135,7 +135,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="display-5 mb-4">Por que deveria confiar em nós? Saiba mais sobre nós!</h1>
-                    <p class="mb-4">Satisfação dos clientes , parceiros e colaboradores através de melhoria continua , relacionamento próximo , confiança e transparência mútua com zelo e dedicação a fim de contribuir para o crescimento mais acelerado do país.</p>
+                    <p class="mb-4">Satisfação dos clientes, parceiros e colaboradores através de melhoria continua , relacionamento próximo , confiança e transparência mútua com zelo e dedicação a fim de contribuir para o crescimento mais acelerado do país.</p>
                     <div class="row g-4">
                         <div class="col-12">
                             <div class="d-flex align-items-start">
